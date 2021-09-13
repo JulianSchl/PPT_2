@@ -1,0 +1,139 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2012                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _e91649cfd8-20210420 OPENFOAM=2012 patch=210414
+Arch   : "LSB;label=32;scalar=64"
+Exec   : decomposePar -case openfoam
+Date   : Aug 29 2021
+Time   : 19:32:13
+Host   : scw-a5ymyf
+PID    : 6948
+I/O    : uncollated
+Case   : /home/julian/software/mbdyn-adapter/210829/2Blades_preCICE_14/openfoam
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh region0
+
+Create mesh
+
+Calculating distribution of cells
+Selecting decompositionMethod scotch [7]
+
+Finished decomposition in 0.11 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+
+Processor 0
+    Number of cells = 8902
+    Number of faces shared with processor 1 = 102
+    Number of faces shared with processor 5 = 100
+    Number of processor patches = 2
+    Number of processor faces = 202
+    Number of boundary faces = 18436
+
+Processor 1
+    Number of cells = 8966
+    Number of faces shared with processor 0 = 102
+    Number of faces shared with processor 2 = 165
+    Number of faces shared with processor 3 = 42
+    Number of faces shared with processor 5 = 45
+    Number of faces shared with processor 6 = 60
+    Number of processor patches = 5
+    Number of processor faces = 414
+    Number of boundary faces = 17932
+
+Processor 2
+    Number of cells = 8923
+    Number of faces shared with processor 1 = 165
+    Number of faces shared with processor 3 = 109
+    Number of faces shared with processor 4 = 65
+    Number of faces shared with processor 6 = 24
+    Number of processor patches = 4
+    Number of processor faces = 363
+    Number of boundary faces = 17846
+
+Processor 3
+    Number of cells = 8854
+    Number of faces shared with processor 1 = 42
+    Number of faces shared with processor 2 = 109
+    Number of faces shared with processor 4 = 137
+    Number of faces shared with processor 5 = 53
+    Number of processor patches = 4
+    Number of processor faces = 341
+    Number of boundary faces = 17828
+
+Processor 4
+    Number of cells = 8906
+    Number of faces shared with processor 2 = 65
+    Number of faces shared with processor 3 = 137
+    Number of faces shared with processor 5 = 10
+    Number of faces shared with processor 6 = 158
+    Number of processor patches = 4
+    Number of processor faces = 370
+    Number of boundary faces = 17812
+
+Processor 5
+    Number of cells = 9003
+    Number of faces shared with processor 0 = 100
+    Number of faces shared with processor 1 = 45
+    Number of faces shared with processor 3 = 53
+    Number of faces shared with processor 4 = 10
+    Number of faces shared with processor 6 = 209
+    Number of processor patches = 5
+    Number of processor faces = 417
+    Number of boundary faces = 18006
+
+Processor 6
+    Number of cells = 8924
+    Number of faces shared with processor 1 = 60
+    Number of faces shared with processor 2 = 24
+    Number of faces shared with processor 4 = 158
+    Number of faces shared with processor 5 = 209
+    Number of processor patches = 4
+    Number of processor faces = 451
+    Number of boundary faces = 17848
+
+Number of processor faces = 1279
+Max number of cells = 9003 (0.8691059253% above average 8925.428571)
+Max number of processor patches = 5 (25% above average 4)
+Max number of faces between processors = 451 (23.41673182% above average 365.4285714)
+
+Time = 0
+
+Processor 0: field transfer
+Detected additional non-decomposed files in "/home/julian/software/mbdyn-adapter/210829/2Blades_preCICE_14/openfoam/0/uniform"
+Processor 1: field transfer
+Detected additional non-decomposed files in "/home/julian/software/mbdyn-adapter/210829/2Blades_preCICE_14/openfoam/0/uniform"
+Processor 2: field transfer
+Detected additional non-decomposed files in "/home/julian/software/mbdyn-adapter/210829/2Blades_preCICE_14/openfoam/0/uniform"
+Processor 3: field transfer
+Detected additional non-decomposed files in "/home/julian/software/mbdyn-adapter/210829/2Blades_preCICE_14/openfoam/0/uniform"
+Processor 4: field transfer
+Detected additional non-decomposed files in "/home/julian/software/mbdyn-adapter/210829/2Blades_preCICE_14/openfoam/0/uniform"
+Processor 5: field transfer
+Detected additional non-decomposed files in "/home/julian/software/mbdyn-adapter/210829/2Blades_preCICE_14/openfoam/0/uniform"
+Processor 6: field transfer
+Detected additional non-decomposed files in "/home/julian/software/mbdyn-adapter/210829/2Blades_preCICE_14/openfoam/0/uniform"
+
+End
+

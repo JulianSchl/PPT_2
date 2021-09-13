@@ -1,0 +1,95 @@
+
+MBDyn - MultiBody Dynamics 1.7.3
+configured on May  5 2021 at 06:34:40
+
+Copyright 1996-2017 (C) Paolo Mantegazza and Pierangelo Masarati,
+Dipartimento di Ingegneria Aerospaziale <http://www.aero.polimi.it/>
+Politecnico di Milano                   <http://www.polimi.it/>
+
+MBDyn is free software, covered by the GNU General Public License,
+and you are welcome to change it and/or distribute copies of it
+under certain conditions.  Use 'mbdyn --license' to see the conditions.
+There is absolutely no warranty for MBDyn.  Use "mbdyn --warranty"
+for details.
+
+reading from file "/home/julian/software/mbdyn-adapter/210829/2Blades_preCICE_14/mbdyn/mbdynAdapter/../mbdynData/membrane.mbd"
+Creating scalar solver with Umfpack linear solver
+Reading Structural(11)
+Reading Structural(12)
+Reading Structural(13)
+Reading Structural(14)
+Reading Structural(15)
+Reading Structural(1001)
+Reading Structural(2001)
+Reading Structural(1002)
+Reading Structural(2002)
+Reading Structural(1003)
+Reading Structural(2003)
+Reading Structural(1004)
+Reading Structural(2004)
+Reading Structural(1005)
+Reading Structural(2005)
+Reading Structural(1006)
+Reading Structural(2006)
+Reading Structural(1007)
+Reading Structural(2007)
+Reading Structural(1008)
+Reading Structural(2008)
+Reading Structural(1009)
+Reading Structural(2009)
+Reading Structural(1010)
+Reading Structural(2010)
+Reading Structural(1011)
+Reading Structural(2011)
+Reading Structural(1012)
+Reading Structural(2012)
+Reading Body(101)
+Reading Body(102)
+Reading Body(201)
+Reading Body(202)
+Reading Body(1001)
+Reading Body(2001)
+Reading Body(1002)
+Reading Body(2002)
+Reading Body(1003)
+Reading Body(2003)
+Reading Body(1004)
+Reading Body(2004)
+Reading Body(1005)
+Reading Body(2005)
+Reading Body(1006)
+Reading Body(2006)
+Reading Body(1007)
+Reading Body(2007)
+Reading Body(1008)
+Reading Body(2008)
+Reading Body(1009)
+Reading Body(2009)
+Reading Body(1010)
+Reading Body(2010)
+Reading Body(1011)
+Reading Body(2011)
+Reading Beam(1002)
+Reading Beam(2002)
+Reading Beam(1004)
+Reading Beam(2004)
+Reading Beam(1006)
+Reading Beam(2006)
+Reading Beam(1008)
+Reading Beam(2008)
+Reading Beam(1010)
+Reading Beam(2010)
+Reading Joint(1)
+Reading Joint(2)
+Reading Joint(3)
+Reading Joint(4)
+Reading Joint(5)
+Reading Joint(101)
+Reading Joint(102)
+Reading Joint(103)
+Reading Joint(201)
+Reading Joint(202)
+Reading Joint(203)
+Reading Force(12)
+LOCAL connection to path="membrane.sock"
+MBDyn was interrupted

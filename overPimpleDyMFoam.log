@@ -1,0 +1,384 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2012                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _e91649cfd8-20210420 OPENFOAM=2012 patch=210414
+Arch   : "LSB;label=32;scalar=64"
+Exec   : overPimpleDyMFoam -case openfoam -parallel
+Date   : Aug 29 2021
+Time   : 19:32:15
+Host   : scw-a5ymyf
+PID    : 6965
+I/O    : uncollated
+Case   : /home/julian/software/mbdyn-adapter/210829/2Blades_preCICE_14/openfoam
+nProcs : 7
+Hosts  :
+(
+    (scw-a5ymyf 7)
+)
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Selecting dynamicFvMesh dynamicOversetFvMesh
+Selecting motion solver: solidBodyDisplacementLaplacianMultiZone
+Applying solid body motion to entire mesh
+[3] socket name (constructor): ./exchange0.sock
+[5] socket name (constructor): ./exchange0.sock
+[6] socket name (constructor): ./exchange0.sock
+[1] socket name (constructor): ./exchange0.sock
+[2] socket name (constructor): ./exchange0.sock
+[4] socket name (constructor): ./exchange0.sock
+Selecting motion diffusion: uniform
+Selecting solid-body motion function controlled6DoFMotion
+[0] socket name (constructor): ./exchange0.sock
+Constructor
+Socket successfully created..
+Socket successfully bound...
+Server listening..
+server acccept the client...
+[1] socket name (constructor): ./exchange1.sock
+[4] socket name (constructor): ./exchange1.sock
+[2] socket name (constructor): ./exchange1.sock
+[3] socket name (constructor): ./exchange1.sock
+[5] socket name (constructor): ./exchange1.sock
+Applying solid body motion controlled6DoFMotion to 115788 points of cellZone c0
+Selecting solid-body motion function controlled6DoFMotion
+[0] socket name (constructor): ./exchange1.sock
+Constructor
+Socket successfully created..
+Socket successfully bound...
+Server listening..
+[6] socket name (constructor): ./exchange1.sock
+server acccept the client...
+[5] socket name (constructor): ./exchange2.sock
+[1] socket name (constructor): ./exchange2.sock
+[4] socket name (constructor): ./exchange2.sock
+[3] socket name (constructor): ./exchange2.sock
+Applying solid body motion controlled6DoFMotion to 6952 points of cellZone c1
+Selecting solid-body motion function controlled6DoFMotion
+[0] socket name (constructor): ./exchange2.sock
+Constructor
+Socket successfully created..
+[6] socket name (constructor): ./exchange2.sock
+Socket successfully bound...
+Server listening..
+[2] socket name (constructor): ./exchange2.sock
+server acccept the client...
+Applying solid body motion controlled6DoFMotion to 6952 points of cellZone c2
+
+PIMPLE: max iterations = 30
+    field "(U|k|omega)"	: relTol 0, tolerance 0.01
+    field p	: relTol 0, tolerance 0.01
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Creating cellMask field to block out hole cells
+
+Creating interpolatedCells field 
+
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type RAS
+Selecting RAS turbulence model kOmegaSST
+Selecting patchDistMethod Poisson
+cellVolumeWeight : detected 3 mesh regions
+
+    zone:0 nCells:55842
+    zone:1 nCells:3318
+    zone:2 nCells:3318
+Marking patch-cells on zone 0
+Marking patch-cells on zone 1
+Marking patch-cells on zone 2
+
+After patch analysis : nCells : 62478
+    other  : 61730
+    patch  : 432
+    overset: 316
+
+Creating mesh-to-mesh addressing for region0 and region0 regions using cellVolumeWeight
+meshToMesh: Using AABBTree method
+    Overlap volume: 0.002061141778
+Creating mesh-to-mesh addressing for region0 and region0 regions using cellVolumeWeight
+meshToMesh: Using AABBTree method
+    Overlap volume: 0.002061141778
+Creating mesh-to-mesh addressing for region0 and region0 regions using cellVolumeWeight
+    Overlap volume: 0
+cellVolumeWeight : detected 7 mesh regions after overset
+
+Front : fraction:1 size:409
+Overset analysis : nCells : 62478
+    calculated   : 61958
+    interpolated : 400
+    hole         : 120
+
+DILUPBiCGStab:  Solving for yPsi, Initial residual = 1, Final residual = 9.689167863e-09, No Iterations 300
+RAS
+{
+    RASModel        kOmegaSST;
+    turbulence      on;
+    printCoeffs     on;
+    alphaK1         0.85;
+    alphaK2         1;
+    alphaOmega1     0.5;
+    alphaOmega2     0.856;
+    gamma1          0.5555555556;
+    gamma2          0.44;
+    beta1           0.075;
+    beta2           0.0828;
+    betaStar        0.09;
+    a1              0.31;
+    b1              1;
+    c1              10;
+    F3              false;
+    decayControl    false;
+    kInf            0;
+    omegaInf        0;
+}
+
+Reading/calculating face velocity Uf
+
+No MRF models present
+
+No finite volume options present
+Courant Number mean: 0 max: 0
+
+Starting time loop
+
+---[preciceAdapter] The preciceAdapter was loaded.
+---[preciceAdapter] Reading preciceDict...
+(0) 19:32:16 [impl::SolverInterfaceImpl]:164 in configure: [0mThis is preCICE version 2.2.0
+(0) 19:32:16 [impl::SolverInterfaceImpl]:165 in configure: [0mRevision info: v2.2.0
+(0) 19:32:16 [impl::SolverInterfaceImpl]:169 in configure: [0mConfiguration: Release (Debug and Trace log unavailable)
+(0) 19:32:16 [impl::SolverInterfaceImpl]:171 in configure: [0mConfiguring preCICE with configuration "precice-config.xml"
+(0) 19:32:16 [impl::SolverInterfaceImpl]:172 in configure: [0mI am participant "Fluid"
+(0) 19:32:16 [com::Communication]:25 in connectMasterSlaves: [0mConnecting Master to 6 Slaves
+(0) 19:32:16 [impl::SolverInterfaceImpl]:258 in initialize: [0mSetting up master communication to coupling partner/s
+(0) 19:32:16 [impl::SolverInterfaceImpl]:267 in initialize: [0mMasters are connected
+(0) 19:32:16 [impl::SolverInterfaceImpl]:271 in initialize: [0mSetting up preliminary slaves communication to coupling partner/s
+(0) 19:32:16 [partition::ProvidedPartition]:118 in prepare: [0mPrepare partition for mesh Fluid-Mesh-Left
+(0) 19:32:16 [partition::ProvidedPartition]:118 in prepare: [0mPrepare partition for mesh Fluid-Mesh-Right
+(0) 19:32:16 [partition::ReceivedPartition]:66 in communicate: [0mReceive global mesh Solid-Mesh-Left
+(0) 19:32:16 [partition::ReceivedPartition]:66 in communicate: [0mReceive global mesh Solid-Mesh-Right
+(0) 19:32:16 [partition::ReceivedPartition]:313 in filterByBoundingBox: [0mBroadcast mesh Solid-Mesh-Left
+(0) 19:32:16 [partition::ReceivedPartition]:133 in compute: [0mFilter mesh Solid-Mesh-Left by mappings
+(0) 19:32:16 [partition::ReceivedPartition]:174 in compute: [0mFeedback distribution for mesh Solid-Mesh-Left
+(0) 19:32:16 [partition::ReceivedPartition]:313 in filterByBoundingBox: [0mBroadcast mesh Solid-Mesh-Right
+(0) 19:32:16 [partition::ReceivedPartition]:133 in compute: [0mFilter mesh Solid-Mesh-Right by mappings
+(0) 19:32:16 [partition::ReceivedPartition]:174 in compute: [0mFeedback distribution for mesh Solid-Mesh-Right
+(0) 19:32:16 [impl::SolverInterfaceImpl]:279 in initialize: [0mSetting up slaves communication to coupling partner/s
+(0) 19:32:16 [impl::SolverInterfaceImpl]:285 in initialize: [0mSlaves are connected
+(0) 19:32:16 [impl::SolverInterfaceImpl]:317 in initialize: [0miteration: 1, time-window: 1, time: 0 of 0.5, time-window-size: 0.0001, max-timestep-length: 0.0001, ongoing: yes, time-window-complete: no, 
+(0) 19:32:16 [impl::SolverInterfaceImpl]:1476 in mapWrittenData: [0mCompute write mapping from mesh "Fluid-Mesh-Right" to mesh "Solid-Mesh-Right".
+(0) 19:32:16 [impl::SolverInterfaceImpl]:1476 in mapWrittenData: [0mCompute write mapping from mesh "Fluid-Mesh-Left" to mesh "Solid-Mesh-Left".
+(0) 19:32:16 [cplscheme::BaseCouplingScheme]:173 in initializeData: [0minitializeData is skipped since no data has to be initialized.
+---[preciceAdapter] preCICE was configured and initialized
+---[preciceAdapter] Setting the solver's endTime to infinity to prevent early exits. Only preCICE will control the simulation's endTime. Any functionObject's end() method will be triggered by the adapter. You may disable this behavior in the adapter's configuration.
+Courant Number mean: 0 max: 0
+Time = 0.0001
+
+DICPCG:  Solving for cellDisplacementx:  solution singularity
+DICPCG:  Solving for cellDisplacementy:  solution singularity
+Ich bin der Master proc (Member Functions) ...1
+Reading...
+
+0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+From client: 0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0[2] data: "0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0"
+[2] Data slave: "0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0"
+[4] data: "0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0"
+[4] Data slave: "0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0"
+	[3] data: "0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0"
+[3] Data slave: "0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0"
+[5] data: "0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0"
+[5] Data slave: "0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0"
+[1] data: "0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0"
+[1] Data slave: "0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0"
+[6] data: "0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0"
+[6] Data slave: "0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0"
+ To client : [0] data: "0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0"
+[0] Data master: "0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0"
+
+Displacement: (0 0 0)
+Rotation: (0 0 0)
+CofG: (0 0 0)
+times: 0.0001
+t: 0.0001
+[6] data: "0.0001751;0.0025;0.0;0.0;0.0;0.002335;0.5;-0.03503;0.0"
+[6] Data slave: "0.0001751;0.0025;0.0;0.0;0.0;0.002335;0.5;-0.03503;0.0"
+[3] data: "0.0001751;0.0025;0.0;0.0;0.0;0.002335;0.5;-0.03503;0.0"
+[3] Data slave: "0.0001751;0.0025;0.0;0.0;0.0;0.002335;0.5;-0.03503;0.0"
+[5] data: "0.0001751;0.0025;0.0;0.0;0.0;0.002335;0.5;-0.03503;0.0"
+[5] Data slave: "0.0001751;0.0025;0.0;0.0;0.0;0.002335;0.5;-0.03503;0.0"
+[4] data: "0.0001751;0.0025;0.0;0.0;0.0;0.002335;0.5;-0.03503;0.0"
+[4] Data slave: "0.0001751;0.0025;0.0;0.0;0.0;0.002335;0.5;-0.03503;0.0"
+TRV: ((0 0 0) (0 0 0))Ich bin der Master proc (Member Functions) ...1
+Reading...
+
+0.0001751;0.0025;0.0;0.0;0.0;0.002335;0.5;-0.03503;0.0
+From client: 0.0001751;0.0025;0.0;0.0;0.0;0.002335;0.5;-0.03503;0.0	 To client : [0] data: "0.0001751;0.0025;0.0;0.0;0.0;0.002335;0.5;-0.03503;0.0"
+[0] Data master: "0.0001751;0.0025;0.0;0.0;0.0;0.002335;0.5;-0.03503;0.0"
+
+Displacement: (0.0001750999945 0.002499999944 0)
+[1] data: "0.0001751;0.0025;0.0;0.0;0.0;0.002335;0.5;-0.03503;0.0"
+[2] data: "0.0001751;0.0025;0.0;0.0;0.0;0.002335;0.5;-0.03503;0.0"
+[2] Data slave: "0.0001751;0.0025;0.0;0.0;0.0;0.002335;0.5;-0.03503;0.0"
+[1] Data slave: "0.0001751;0.0025;0.0;0.0;0.0;0.002335;0.5;-0.03503;0.0"
+Rotation: (0 0 0.002335000085)
+CofG: (0.5 -0.03502999991 0)
+times: 0.0001
+t: 0.0001
+TRV: ((0.0001750999945 0.002499999944 0) (0 0 0.002335000085))Ich bin der Master proc (Member Functions) ...1
+Reading...
+
+-0.0001751;-0.0025;0.0;0.0;0.0;0.007317;-0.5;0.03503;0.0
+[3] data: "-0.0001751;-0.0025;0.0;0.0;0.0;0.007317;-0.5;0.03503;0.0"
+[3] Data slave: "-0.0001751;-0.0025;0.0;0.0;0.0;0.007317;-0.5;0.03503;0.0"
+[5] data: "-0.0001751;-0.0025;0.0;0.0;0.0;0.007317;-0.5;0.03503;0.0"
+[5] Data slave: "-0.0001751;-0.0025;0.0;0.0;0.0;0.007317;-0.5;0.03503;0.0"
+[2] data: "-0.0001751;-0.0025;0.0;0.0;0.0;0.007317;-0.5;0.03503;0.0"
+[2] Data slave: "-0.0001751;-0.0025;0.0;0.0;0.0;0.007317;-0.5;0.03503;0.0"
+From client: -0.0001751;-0.0025;0.0;0.0;0.0;0.007317;-0.5;0.03503;0.0	 To client : [0] data: "-0.0001751;-0.0025;0.0;0.0;0.0;0.007317;-0.5;0.03503;0.0"
+[0] Data master: "-0.0001751;-0.0025;0.0;0.0;0.0;0.007317;-0.5;0.03503;0.0"
+
+Displacement: (-0.0001750999945 -0.002499999944 0)
+Rotation: (0 0 0.007317000069)
+CofG: (-0.5 0.03502999991 0)
+times: 0.0001
+t: 0.0001
+[1] data: "-0.0001751;-0.0025;0.0;0.0;0.0;0.007317;-0.5;0.03503;0.0"
+[1] Data slave: "-0.0001751;-0.0025;0.0;0.0;0.0;0.007317;-0.5;0.03503;0.0"
+[4] data: "-0.0001751;-0.0025;0.0;0.0;0.0;0.007317;-0.5;0.03503;0.0"
+[4] Data slave: "-0.0001751;-0.0025;0.0;0.0;0.0;0.007317;-0.5;0.03503;0.0"
+[6] data: "-0.0001751;-0.0025;0.0;0.0;0.0;0.007317;-0.5;0.03503;0.0"
+[6] Data slave: "-0.0001751;-0.0025;0.0;0.0;0.0;0.007317;-0.5;0.03503;0.0"
+TRV: ((-0.0001750999945 -0.002499999944 0) (0 0 0.007317000069))DILUPBiCGStab:  Solving for yPsi, Initial residual = 1, Final residual = 8.193977415e-09, No Iterations 313
+cellVolumeWeight : detected 3 mesh regions
+
+    zone:0 nCells:55842
+    zone:1 nCells:3318
+    zone:2 nCells:3318
+Marking patch-cells on zone 0
+Marking patch-cells on zone 1
+Marking patch-cells on zone 2
+
+After patch analysis : nCells : 62478
+    other  : 61730
+    patch  : 432
+    overset: 316
+
+Creating mesh-to-mesh addressing for region0 and region0 regions using cellVolumeWeight
+meshToMesh: Using AABBTree method
+    Overlap volume: 0.00206114178
+Creating mesh-to-mesh addressing for region0 and region0 regions using cellVolumeWeight
+meshToMesh: Using AABBTree method
+    Overlap volume: 0.002061141778
+Creating mesh-to-mesh addressing for region0 and region0 regions using cellVolumeWeight
+    Overlap volume: 0
+cellVolumeWeight : detected 5 mesh regions after overset
+
+Front : fraction:1 size:413
+Overset analysis : nCells : 62478
+    calculated   : 61950
+    interpolated : 404
+    hole         : 124
+
+Mesh Courant Number mean: 1.668869943e-05 max: 10.50613484
+PIMPLE: iteration 1
+DILUPBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 8.963809393e-10, No Iterations 4
+DILUPBiCGStab:  Solving for Uy, Initial residual = 1, Final residual = 9.332157842e-10, No Iterations 4
+DILUPBiCGStab:  Solving for p, Initial residual = 1, Final residual = 0.0009168189463, No Iterations 109
+DILUPBiCGStab:  Solving for p, Initial residual = 0.03331854016, Final residual = 0.0008254742275, No Iterations 39
+DILUPBiCGStab:  Solving for p, Initial residual = 0.003708962808, Final residual = 0.0009551706247, No Iterations 2
+DILUPBiCGStab:  Solving for p, Initial residual = 0.002125343898, Final residual = 0.0008919276107, No Iterations 1
+time step continuity errors : sum local = 1.687419357e-10, global = -9.685974686e-11, cumulative = -9.685974686e-11
+DILUPBiCGStab:  Solving for p, Initial residual = 0.4508433656, Final residual = 0.0009155618649, No Iterations 93
+DILUPBiCGStab:  Solving for p, Initial residual = 0.0224372058, Final residual = 0.000688244939, No Iterations 31
+DILUPBiCGStab:  Solving for p, Initial residual = 0.00308834573, Final residual = 0.0008684934941, No Iterations 1
+DILUPBiCGStab:  Solving for p, Initial residual = 0.001763946286, Final residual = 0.000753099051, No Iterations 1
+time step continuity errors : sum local = 1.450303609e-10, global = -1.210390931e-10, cumulative = -2.1789884e-10
+DILUPBiCGStab:  Solving for p, Initial residual = 0.4417802122, Final residual = 0.0008774173461, No Iterations 135
+DILUPBiCGStab:  Solving for p, Initial residual = 0.02045397554, Final residual = 0.0009535599868, No Iterations 31
+DILUPBiCGStab:  Solving for p, Initial residual = 0.00302688527, Final residual = 0.0009798267971, No Iterations 2
+DILUPBiCGStab:  Solving for p, Initial residual = 0.001784684835, Final residual = 9.551544625e-05, No Iterations 91
+time step continuity errors : sum local = 2.037370841e-11, global = -2.606178607e-12, cumulative = -2.205050186e-10
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.27139575e-06, Final residual = 6.522947646e-09, No Iterations 1
+DILUPBiCGStab:  Solving for k, Initial residual = 0.9999999998, Final residual = 3.42361401e-09, No Iterations 3
+PIMPLE: iteration 2
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.003163576729, Final residual = 3.076763256e-09, No Iterations 2
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.02114892681, Final residual = 4.16435207e-10, No Iterations 3
+DILUPBiCGStab:  Solving for p, Initial residual = 0.3493423905, Final residual = 0.0009594141142, No Iterations 142
+DILUPBiCGStab:  Solving for p, Initial residual = 0.01272103851, Final residual = 0.0009418693429, No Iterations 15
+DILUPBiCGStab:  Solving for p, Initial residual = 0.001798730541, Final residual = 0.0009562553396, No Iterations 1
+DILUPBiCGStab:  Solving for p, Initial residual = 0.001295971095, Final residual = 0.000918843296, No Iterations 1
+time step continuity errors : sum local = 2.493540717e-10, global = -1.176601502e-10, cumulative = -3.381651688e-10
+DILUPBiCGStab:  Solving for p, Initial residual = 0.1900425168, Final residual = 0.0009845535009, No Iterations 78
+DILUPBiCGStab:  Solving for p, Initial residual = 0.01156513324, Final residual = 0.0009894679343, No Iterations 15
+DILUPBiCGStab:  Solving for p, Initial residual = 0.001892440903, Final residual = 0.000997442798, No Iterations 2
+DILUPBiCGStab:  Solving for p, Initial residual = 0.001391620585, Final residual = 0.0009678581936, No Iterations 1
+time step continuity errors : sum local = 2.306682461e-10, global = -1.900754093e-10, cumulative = -5.282405782e-10
+DILUPBiCGStab:  Solving for p, Initial residual = 0.2050170246, Final residual = 0.0009846019256, No Iterations 78
+DILUPBiCGStab:  Solving for p, Initial residual = 0.01200316745, Final residual = 0.000972139473, No Iterations 16
+DILUPBiCGStab:  Solving for p, Initial residual = 0.001933644006, Final residual = 0.0009996943649, No Iterations 1
+DILUPBiCGStab:  Solving for p, Initial residual = 0.001387511945, Final residual = 8.671497824e-05, No Iterations 141
+time step continuity errors : sum local = 2.041158247e-11, global = -3.368399555e-12, cumulative = -5.316089777e-10
+DILUPBiCGStab:  Solving for omega, Initial residual = 5.922450824e-07, Final residual = 3.889635211e-09, No Iterations 1
+DILUPBiCGStab:  Solving for k, Initial residual = 0.0002280291049, Final residual = 2.260645155e-09, No Iterations 2
+PIMPLE: iteration 3
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.001950923467, Final residual = 2.159134921e-09, No Iterations 2
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.005763764341, Final residual = 7.55588505e-09, No Iterations 2
+DILUPBiCGStab:  Solving for p, Initial residual = 0.1956125875, Final residual = 0.0009490638933, No Iterations 87
+DILUPBiCGStab:  Solving for p, Initial residual = 0.01090485533, Final residual = 0.0009946865689, No Iterations 15
+DILUPBiCGStab:  Solving for p, Initial residual = 0.001965236423, Final residual = 0.0009961364876, No Iterations 2
+DILUPBiCGStab:  Solving for p, Initial residual = 0.001440127711, Final residual = 0.0009856600568, No Iterations 1
+time step continuity errors : sum local = 2.079890543e-10, global = 1.565850867e-10, cumulative = -3.75023891e-10
+DILUPBiCGStab:  Solving for p, Initial residual = 0.1373068324, Final residual = 0.0007219044102, No Iterations 146
+DILUPBiCGStab:  Solving for p, Initial residual = 0.00876627941, Final residual = 0.0009670011455, No Iterations 9
+DILUPBiCGStab:  Solving for p, Initial residual = 0.001918909027, Final residual = 0.0009789457041, No Iterations 1
+DILUPBiCGStab:  Solving for p, Initial residual = 0.001405595219, Final residual = 0.0009541031318, No Iterations 1
+time step continuity errors : sum local = 1.995872402e-10, global = -5.305347105e-11, cumulative = -4.280773621e-10
+DILUPBiCGStab:  Solving for p, Initial residual = 0.1777326796, Final residual = 0.0009640716257, No Iterations 75
+DILUPBiCGStab:  Solving for p, Initial residual = 0.01030476417, Final residual = 0.0009517788438, No Iterations 12
+DILUPBiCGStab:  Solving for p, Initial residual = 0.002079323662, Final residual = 0.0009923035595, No Iterations 1
+DILUPBiCGStab:  Solving for p, Initial residual = 0.001518615658, Final residual = 7.81916668e-05, No Iterations 113
+time step continuity errors : sum local = 1.342346109e-11, global = 1.297273487e-12, cumulative = -4.267800886e-10
+DILUPBiCGStab:  Solving for omega, Initial residual = 4.004808094e-07, Final residual = 2.672298483e-09, No Iterations 1
+DILUPBiCGStab:  Solving for k, Initial residual = 4.177744323e-05, Final residual = 8.367675352e-09, No Iterations 1
+PIMPLE: iteration 4
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0007490544785, Final residual = 3.886087806e-10, No Iterations 3
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.003196955439, Final residual = 9.098300767e-11, No Iterations 3
+DILUPBiCGStab:  Solving for p, Initial residual = 0.1955031478, Final residual = 0.0007914757221, No Iterations 140
+DILUPBiCGStab:  Solving for p, Initial residual = 0.004039768833, Final residual = 0.0008583602243, No Iterations 2
+DILUPBiCGStab:  Solving for p, Initial residual = 0.001206353789, Final residual = 0.0006486167895, No Iterations 1
+DILUPBiCGStab:  Solving for p, Initial residual = 0.0008130879158, Final residual = 0.0005762541285, No Iterations 1
+time step continuity errors : sum local = 3.158188726e-10, global = -6.328815198e-11, cumulative = -4.900682406e-10
+DILUPBiCGStab:  Solving for p, Initial residual = 0.01612570834, Final residual = 0.0009957482592, No Iterations 16
+DILUPBiCGStab:  Solving for p, Initial residual = 0.00165640336, Final residual = 0.0009483788054, No Iterations 2
+DILUPBiCGStab:  Solving for p, Initial residual = 0.001123773678, Final residual = 0.0009282784738, No Iterations 1
+DILUPBiCGStab:  Solving for p, Initial residual = 0.001029595067, Final residual = 0.0009057220438, No Iterations 1
+time step continuity errors : sum local = 4.421327294e-10, global = 1.459375785e-10, cumulative = -3.441306621e-10
+DILUPBiCGStab:  Solving for p, Initial residual = 0.01031405025, Final residual = 0.0009974491964, No Iterations 22
+DILUPBiCGStab:  Solving for p, Initial residual = 0.001427119332, Final residual = 0.0009945580421, No Iterations 1
+DILUPBiCGStab:  Solving for p, Initial residual = 0.001139846964, Final residual = 0.0009572869313, No Iterations 1
+DILUPBiCGStab:  Solving for p, Initial residual = 0.001043879376, Final residual = 9.606889722e-05, No Iterations 91
+time step continuity errors : sum local = 4.696569636e-11, global = 2.441455444e-11, cumulative = -3.197161077e-10
+DILUPBiCGStab:  Solving for omega, Initial residual = 3.477072565e-07, Final residual = 2.940025435e-11, No Iterations 3
+DILUPBiCGStab:  Solving for k, Initial residual = 1.510520811e-05, Final residual = 2.164576602e-10, No Iterations 3
+PIMPLE: converged in 4 iterations
+ExecutionTime = 5.92 s  ClockTime = 6 s
+

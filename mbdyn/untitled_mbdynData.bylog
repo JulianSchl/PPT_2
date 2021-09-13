@@ -1,0 +1,6 @@
+06/26/2021 02:14:37 PM - WARNING - [blendyn.py:907] - BLENDYN_OT_read_mbdyn_log_file::execute(): Could not locate the .out file
+06/26/2021 02:14:37 PM - INFO - [blendyn.py:2188] - BLENDYN_OT_node_import_all::execute(): All MBDyn nodes imported successfully
+06/26/2021 02:14:37 PM - INFO - [blendyn.py:847] - BLENDYN_OT_standard_import::execute(): BLENDYN_OT_standard_import::modal(): Done.
+06/26/2021 02:14:40 PM - WARNING - [blendyn.py:907] - BLENDYN_OT_read_mbdyn_log_file::execute(): Could not locate the .out file
+06/26/2021 02:14:40 PM - INFO - [blendyn.py:2188] - BLENDYN_OT_node_import_all::execute(): All MBDyn nodes imported successfully
+06/26/2021 02:14:40 PM - INFO - [blendyn.py:847] - BLENDYN_OT_standard_import::execute(): BLENDYN_OT_standard_import::modal(): Done.
